@@ -1,5 +1,8 @@
 package org.stjs.javascript;
 
+import org.stjs.javascript.annotation.SyntheticType;
+
+@SyntheticType
 public class MutationObserverInit {
 
     /**
