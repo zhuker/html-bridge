@@ -22,12 +22,18 @@ public class Promise<T> {
     }
 
     @Native
-    public <R> Promise<R> then(Function1<T, R> onFulfilled) {
+    public <R> Promise<R> then(Function1<T, Promise<R>> onFulfilled) {
+        return null;
+    }
+    
+    @Native
+    @Template("prefix")
+    public <R> Promise<R> $then(Callback1<T> onFulfilled) {
         return null;
     }
 
     @Native
-    public <R> Promise<R> then(Function1<T, R> onFulfilled, Callback1 onRejected) {
+    public <R> Promise<R> then(Function1<T, Promise<R>> onFulfilled, Callback1 onRejected) {
         return null;
     }
     
