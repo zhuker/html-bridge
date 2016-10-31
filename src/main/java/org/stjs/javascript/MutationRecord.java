@@ -9,10 +9,13 @@ public class MutationRecord {
      * Returns "attributes" if the mutation was an attribute mutation,
      * "characterData" if it was a mutation to a CharacterData node, and
      * "childList" if it was a mutation to the tree of nodes.
-     * MutationRecord.target Node Returns the node the mutation affected,
-     * depending on the MutationRecord.type.
      */
     public String type;
+    
+    /** Returns the node the mutation affected,
+    * depending on the MutationRecord.type.
+    */
+     public Node target;
 
     /**
      * For attributes, it is the element whose attribute changed.
