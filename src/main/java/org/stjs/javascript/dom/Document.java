@@ -18,7 +18,6 @@ package org.stjs.javascript.dom;
 import org.stjs.javascript.Location;
 import org.stjs.javascript.functions.Callback0;
 import org.stjs.javascript.functions.Callback1;
-import org.w3c.dom.xpath.XPathResult;
 
 import java.lang.*;
 import java.lang.Object;
