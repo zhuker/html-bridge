@@ -1,8 +1,9 @@
 package org.stjs.javascript.builtin;
 
 import org.stjs.javascript.functions.Callback1;
+import org.stjs.javascript.functions.Callback2;
 
-public class Map<P1, P2> {
+public class Map<K, V> {
     /**
      * The Map object is a simple key/value map. Any value (both objects and
      * primitive values) may be used as either a key or a value.
@@ -36,7 +37,7 @@ public class Map<P1, P2> {
      * in insertion order. If a thisArg parameter is provided to forEach, it
      * will be used as the this value for each callback.
      */
-    public void forEach(Callback1<Object> cb) {
+    public void forEach(Callback2<V, K> cb) {
     };
 
     /**
