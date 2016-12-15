@@ -43,7 +43,7 @@ public class Map<K, V> {
     /**
      * Returns the value associated to the key, or undefined if there is none.
      */
-    public Object get(Object key) {
+    public V get(Object key) {
         return null;
     }
 

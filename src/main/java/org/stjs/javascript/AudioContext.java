@@ -155,7 +155,8 @@ public class AudioContext {
      * Creates a GainNode, which can be used to control the overall volume of
      * the audio graph.
      */
-    public void createGain() {
+    public GainNode createGain() {
+        return null;
     };
 
     /**
