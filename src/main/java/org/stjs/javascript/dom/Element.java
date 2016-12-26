@@ -15,7 +15,6 @@
  */
 package org.stjs.javascript.dom;
 
-import org.stjs.javascript.Array;
 import org.stjs.javascript.CSSStyleDeclaration;
 import org.stjs.javascript.StyleSheet;
 import org.stjs.javascript.Window;
@@ -210,6 +209,12 @@ abstract public class Element extends Node implements EventTarget {
 
 	/** https://developer.mozilla.org/en-US/docs/Web/API/Element/closest */
 	public native Element closest(String selectors);
+	
+	public native void scrollIntoView();
+	
+	public native void scrollIntoView(boolean alignToTop);
+	
+	public native void scrollIntoView(org.stjs.javascript.Map options);
 
 	public Element nextElementSibling;
 	
