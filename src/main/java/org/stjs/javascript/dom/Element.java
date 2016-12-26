@@ -214,8 +214,6 @@ abstract public class Element extends Node implements EventTarget {
 	
 	public native void scrollIntoView(boolean alignToTop);
 	
-	public native void scrollIntoView(org.stjs.javascript.Map options);
-
 	public Element nextElementSibling;
 	
     /** https://developer.mozilla.org/en-US/docs/Web/API/ChildNode/remove 
