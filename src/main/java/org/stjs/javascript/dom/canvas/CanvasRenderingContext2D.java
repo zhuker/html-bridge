@@ -2,9 +2,29 @@ package org.stjs.javascript.dom.canvas;
 
 import org.stjs.javascript.Array;
 import org.stjs.javascript.dom.Canvas;
+import org.stjs.javascript.dom.Image;
 
 public final class CanvasRenderingContext2D {
 
+	public static GLenum TEXTURE_CUBE_MAP_NEGATIVE_Z;
+	public static GLenum TEXTURE_CUBE_MAP_POSITIVE_Z;
+	public static GLenum TEXTURE_CUBE_MAP_NEGATIVE_Y;
+	public static GLenum TEXTURE_CUBE_MAP_POSITIVE_Y;
+	public static GLenum TEXTURE_CUBE_MAP_NEGATIVE_X;
+	public static GLenum UNSIGNED_BYTE;
+	public static GLint RGB;
+	public static GLenum TEXTURE_CUBE_MAP_POSITIVE_X;
+	public static GLenum TEXTURE_WRAP_S;
+	public static GLenum CLAMP_TO_EDGE;
+	public static GLenum TEXTURE_WRAP_T;
+	public static GLenum TEXTURE_MAG_FILTER;
+	public static GLenum NEAREST;
+	public static GLenum TEXTURE_MIN_FILTER;
+    public static WebGLTexture TEXTURE_CUBE_MAP;
+	public static GLenum ONE_MINUS_SRC_ALPHA;
+	public static GLenum DEPTH_TEST;
+	public static GLenum SRC_ALPHA;
+	
 	public Canvas canvas;
 
 	public Object fillStyle;
@@ -42,6 +62,8 @@ public final class CanvasRenderingContext2D {
 	public String textAlign;
 
 	public String textBaseline;
+	public int drawingBufferWidth;
+	public int drawingBufferHeight;
 
 	public native void arc(int x, int y, double radius, double startAngle, double endAngle, boolean anticlockwise);
 
@@ -125,4 +147,22 @@ public final class CanvasRenderingContext2D {
 	public native void transform(double m11, double m12, double m21, double m22, double dx, double dy);
 
 	public native void translate(double x, double y);
+
+	public native void viewport(int x, int y, int width, int heigth);
+
+	public native Object getExtension(String name);
+
+	public native void clearColor(double x, double y, double w, double h);
+
+	public native void enable(GLenum depthTest);
+
+	public native void blendFunc(GLenum srcAlpha, GLenum oneMinusSrcAlpha);
+
+	public native WebGLTexture createTexture();
+
+	public native void bindTexture(WebGLTexture textureMap, WebGLTexture texture);
+
+	public native void texParameteri(WebGLTexture textureCubeMap, GLenum textureMinFilter, GLenum nearest);
+
+	public native void texImage2D(GLenum textureCubeMapPositiveX, int i, GLint rgb, GLint rgb1, GLenum unsignedByte, Image image);
 }
