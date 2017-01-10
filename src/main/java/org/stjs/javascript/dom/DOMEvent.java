@@ -21,6 +21,8 @@ public class DOMEvent {
 	public Element currentTarget;
 	public int pageX;
 	public int pageY;
+	public int offsetX;
+	public int offsetY;
 	public int which;
 	public boolean metaKey;
 	public boolean shiftKey;
