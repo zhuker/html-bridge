@@ -36,6 +36,7 @@ public class XMLHttpRequest implements EventTarget {
 	public Element responseXML;
 	public int status;
 	public String statusText;
+    public boolean withCredentials;
 
 	public native void abort();
 
