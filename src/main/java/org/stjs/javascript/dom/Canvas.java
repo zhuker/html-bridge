@@ -8,6 +8,8 @@ abstract public class Canvas extends Element {
     public int width;
 
     public native CanvasRenderingContext2D getContext(String type, Map<String, Boolean> contextAttributes);
+    
+    public native CanvasRenderingContext2D getContext(String type);
 
     public native String toDataURL(String type);
 }

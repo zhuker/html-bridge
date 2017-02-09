@@ -15,10 +15,12 @@
  */
 package org.stjs.javascript;
 
+import org.stjs.javascript.annotation.Native;
 import org.stjs.javascript.dom.DOMEvent;
 import org.stjs.javascript.dom.Document;
 import org.stjs.javascript.dom.Element;
 import org.stjs.javascript.dom.EventTarget;
+import org.stjs.javascript.file.FileSystem;
 import org.stjs.javascript.functions.Callback0;
 import org.stjs.javascript.functions.Callback1;
 import org.stjs.javascript.functions.Function1;
@@ -60,6 +62,10 @@ public class Window implements EventTarget {
 	/** https://developer.mozilla.org/en-US/docs/Web/API/Window/scrollY */
 	public int scrollY;
     public int scrollX;
+    
+    /** https://developer.mozilla.org/en-US/docs/Web/API/LocalFileSystem */
+    public static final int TEMPORARY = 1;
+    public static final int PERSISTENT = 1;
 
     public native void blur();
 
@@ -123,4 +129,23 @@ public class Window implements EventTarget {
      * @param origin
      */
     public native void postMessage(Object data, String origin);
+
+    /**
+     * https://developer.mozilla.org/en-US/docs/Web/API/Window/confirm
+     * 
+     * @param message
+     *            is the optional string to be displayed in the dialog.
+     * @return result is a boolean value indicating whether OK or Cancel was
+     *         selected (true means OK).
+     * 
+     */
+    public native boolean confirm(String message);
+
+    public native void alert(String string);
+    
+    public native void alert();
+
+    public native void webkitRequestFileSystem(int type, long size, Callback1<FileSystem> callback, Callback1<Error> onerror);
+    
+    public native void requestFileSystem(int type, long size, Callback1<FileSystem> callback, Callback1<Error> onerror);
 }

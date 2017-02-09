@@ -6,6 +6,7 @@ abstract public class DataTransfer {
 	public String dropEffect;
 	public String effectAllowed;
 	public HTMLList<File> files;
+    public HTMLList<DataTransferItem> items;
 	public Array<String> types;
 
 	public native void clearData  (String type);
