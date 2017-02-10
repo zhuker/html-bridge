@@ -67,7 +67,7 @@ abstract public class Node {
 
 	public native void normalize  ();
 
-	public native void removeChild  (Node n);
+	public native Node removeChild  (Node n);
 
 	public native void replaceChild  (Node n1, Node n2);
 	// setUserData(String, Object, UserDataHandler)
