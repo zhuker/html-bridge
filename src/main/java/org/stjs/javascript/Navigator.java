@@ -25,6 +25,12 @@ abstract public class Navigator {
 	public String platform;
 	public String userAgent;
 	public Geolocation geolocation;
+	
+    /**
+     * number of logical processors available to run threads on the user's
+     * computer.
+     */
+    public int hardwareConcurrency;
 
 	public native boolean javaEnabled();
 
