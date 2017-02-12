@@ -2,6 +2,7 @@ package org.stjs.javascript.dom;
 
 import org.stjs.javascript.annotation.Native;
 import org.stjs.javascript.annotation.STJSBridge;
+import org.stjs.javascript.file.FileSystemEntry;
 import org.stjs.javascript.functions.Callback1;
 
 @STJSBridge
@@ -47,7 +48,7 @@ public class DataTransferItem {
      *         either a FileSystemFileEntry or FileSystemDirectoryEntry object.
      */
     @Native
-    public Object webkitGetAsEntry() {
+    public FileSystemEntry webkitGetAsEntry() {
         return null;
     }
 

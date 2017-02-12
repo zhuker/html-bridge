@@ -26,6 +26,10 @@ import org.stjs.javascript.typed.TypedArray;
 public class Blob {
 
     @Native
+    public Blob() {
+    }
+
+    @Native
     public Blob(TypedArray<? extends Number> intArray, Map<String, Object> options) {
     }
 
@@ -39,8 +43,9 @@ public class Blob {
 
     public String type;
 
-
     public native void close();
 
     public native Blob slice(long start, long end, String contentType);
+
+    public native Blob slice(long start, long end);
 }

@@ -1,7 +1,7 @@
 package org.stjs.javascript.dom;
 
-abstract public class File {
+import org.stjs.javascript.file.Blob;
+
+abstract public class File extends Blob {
 	public String name;
-	public int size;
-	public String type;
 }
