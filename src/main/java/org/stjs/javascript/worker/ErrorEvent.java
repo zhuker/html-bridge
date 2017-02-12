@@ -1,10 +1,29 @@
 package org.stjs.javascript.worker;
 
+import org.stjs.javascript.annotation.Native;
 import org.stjs.javascript.annotation.STJSBridge;
+import org.stjs.javascript.annotation.SyntheticType;
 import org.stjs.javascript.dom.DOMEvent;
 
 @STJSBridge
 public class ErrorEvent extends DOMEvent {
+    @Native
+    public ErrorEvent(String type) {
+    }
+
+    @SyntheticType
+    public static class ErrorEventInit {
+        public String message;
+        public String filename;
+        public long lineno;
+        public long colno;
+        public Object error;
+    }
+
+    @Native
+    public ErrorEvent(String type, ErrorEventInit init) {
+    }
+
     /**
      * Is a DOMString containing a human-readable error message describing the
      * problem.
