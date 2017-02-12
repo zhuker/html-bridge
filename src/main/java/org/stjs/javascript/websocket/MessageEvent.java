@@ -17,7 +17,7 @@ import org.stjs.javascript.dom.DOMEvent;
  */
 @STJSBridge
 public class MessageEvent extends DOMEvent {
-    public Object data;
+    public Object data; //Returns a DOMString, Blob or an ArrayBuffer containing the data send by the emitter.
     public String origin;
     public Object ports;
     public Window source;
