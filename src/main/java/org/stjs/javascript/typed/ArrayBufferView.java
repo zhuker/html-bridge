@@ -1,5 +1,7 @@
 package org.stjs.javascript.typed;
 
+import org.stjs.javascript.annotation.STJSBridge;
+
 /**
  * https://developer.mozilla.org/en-US/docs/Web/API/ArrayBufferView
  * 
@@ -12,6 +14,7 @@ package org.stjs.javascript.typed;
  * @author zhukov
  *
  */
+@STJSBridge
 public interface ArrayBufferView {
 
 }
