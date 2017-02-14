@@ -1,38 +1,47 @@
 /**
- *  Copyright 2011 Alexandru Craciun, Eyal Kaspi
- *
- *  Licensed under the Apache License, Version 2.0 (the "License");
- *  you may not use this file except in compliance with the License.
- *  You may obtain a copy of the License at
- *
- *       http://www.apache.org/licenses/LICENSE-2.0
- *
- *  Unless required by applicable law or agreed to in writing, software
- *  distributed under the License is distributed on an "AS IS" BASIS,
- *  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- *  See the License for the specific language governing permissions and
- *  limitations under the License.
+ * Copyright 2011 Alexandru Craciun, Eyal Kaspi
+ * <p>
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ * <p>
+ * http://www.apache.org/licenses/LICENSE-2.0
+ * <p>
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
  */
 package org.stjs.javascript;
 
 import org.stjs.javascript.dom.geo.Geolocation;
+import org.stjs.javascript.eme.MediaKeySystemAccess;
+import org.stjs.javascript.eme.MediaKeySystemConfiguration;
 
 abstract public class Navigator {
-	public String appCodeName;
-	public String appName;
-	public String appVersion;
-	public boolean cookieEnabled;
-	public String platform;
-	public String userAgent;
-	public Geolocation geolocation;
-	
+    public String appCodeName;
+    public String appName;
+    public String appVersion;
+    public boolean cookieEnabled;
+    public String platform;
+    public String userAgent;
+    public Geolocation geolocation;
+
     /**
      * number of logical processors available to run threads on the user's
      * computer.
      */
     public int hardwareConcurrency;
 
-	public native boolean javaEnabled();
+    public native boolean javaEnabled();
 
-	public native boolean taintEnabled();
+    public native boolean taintEnabled();
+
+    /**
+     * ​Navigator.requestMediaKeySystemAccess(keySystem, supportedConfigurations).then(function(mediaKeySystemAccess) { ... }); 
+     */
+
+    public native Promise<MediaKeySystemAccess> requestMediaKeySystemAccess(String keySystem, MediaKeySystemConfiguration supportedConfigurations);
+
 }

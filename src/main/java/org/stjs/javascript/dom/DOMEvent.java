@@ -16,7 +16,7 @@ public class DOMEvent {
 	public Element toElement;
 	public int wheelDelta;
 
-	public Element target;
+	public EventTarget target;
 	public Element relatedTarget;
 	public Element currentTarget;
 	public int pageX;

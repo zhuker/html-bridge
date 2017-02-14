@@ -15,11 +15,12 @@
  */
 package org.stjs.javascript;
 
-import org.stjs.javascript.annotation.Native;
 import org.stjs.javascript.dom.DOMEvent;
 import org.stjs.javascript.dom.Document;
 import org.stjs.javascript.dom.Element;
 import org.stjs.javascript.dom.EventTarget;
+import org.stjs.javascript.eme.MediaKeySystemAccess;
+import org.stjs.javascript.eme.MediaKeySystemConfiguration;
 import org.stjs.javascript.file.FileSystem;
 import org.stjs.javascript.functions.Callback0;
 import org.stjs.javascript.functions.Callback1;
