@@ -17,7 +17,7 @@
 
 
 	<properties>
-		<st-js.version>3.3.0</st-js.version>
+		<st-js.version>3.3.2</st-js.version>
 	</properties>
 
 	<repositories>
