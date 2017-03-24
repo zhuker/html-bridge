@@ -9,37 +9,39 @@ import org.stjs.javascript.annotation.SyntheticType;
 @STJSBridge
 public class MediaKeySystemConfiguration {
     /**
-     * MediaKeySystemConfiguration.initDataTypes Read only
+     * An optional label that will be preserved in the MediaKeySystemConfiguration returned from the getConfiguration() method of MediaKeySystemAccess.
+     */
+    public String label;
+
+    /**
      * Returns a list of supported initialization data type names. An initialization data type is a string indicating the format of the initialization data.
      */
     public Array<String> initDataTypes;
 
     /**
-     * MediaKeySystemConfiguration.audioCapabilities Read only
-     * Returns a list of supported audio type and capability pairs.
+     * A list of supported audio type and capability pairs.
      */
-    public Map<String, String> audioCapabilities;
+    public Array<MediaKeySystemMediaCapability> audioCapabilities;
 
     /**
-     * MediaKeySystemConfiguration.videoCapabilities Read only
-     * Returns a list of supported video type and capability pairs.
+     * A list of supported video type and capability pairs.
      */
-    public Map<String, String> videoCapabilities;
+    public Array<MediaKeySystemMediaCapability> videoCapabilities;
 
     /**
-     * MediaKeySystemConfiguration.distinctiveIdentifier Read only
      * Indicates whether a persistent distinctive identifier is required.
+     * On of MediaKeysRequirement
      */
     public String distinctiveIdentifier;
 
     /**
-     * MediaKeySystemConfiguration.persistentState Read only
      * Indicates whether the ability to persist state is required.
+     * On of MediaKeysRequirement
      */
-    public Object persistentState;
+    public String persistentState;
 
-    public MediaKeySystemConfiguration(Array<String> initDataTypes, Map<String, String> videoCapabilities) {
-        this.initDataTypes = initDataTypes;
-        this.videoCapabilities = videoCapabilities;
-    }
+    /**
+     * A list of MediaKeySessionTypes that must be supported.
+     */
+    public Array<String> sessionTypes;
 }

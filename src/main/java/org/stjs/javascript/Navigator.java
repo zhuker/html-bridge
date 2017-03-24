@@ -38,5 +38,5 @@ abstract public class Navigator {
 
 	public native boolean taintEnabled();
 
-    public native Promise<MediaKeySystemAccess> requestMediaKeySystemAccess(String keySystem, MediaKeySystemConfiguration supportedConfigurations);
+    public native Promise<MediaKeySystemAccess> requestMediaKeySystemAccess(String keySystem, Array<MediaKeySystemConfiguration> supportedConfigurations);
 }
