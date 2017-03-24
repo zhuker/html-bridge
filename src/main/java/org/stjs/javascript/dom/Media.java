@@ -53,6 +53,7 @@ abstract public class Media extends Element {
 	public Boolean webkitPreservesPitch;
 	public Boolean preservesPitch;
 	public Boolean mozPreservesPitch;
+    public MediaKeys mediaKeys;
 
 	// addTextTrack()
 	public native String canPlayType  (String type);

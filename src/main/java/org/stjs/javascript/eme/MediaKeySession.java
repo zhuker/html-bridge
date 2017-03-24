@@ -4,6 +4,7 @@ import org.stjs.javascript.Promise;
 import org.stjs.javascript.annotation.STJSBridge;
 import org.stjs.javascript.dom.EventTarget;
 import org.stjs.javascript.functions.Callback1;
+import org.stjs.javascript.typed.ArrayBuffer;
 import org.stjs.javascript.typed.ArrayBufferView;
 import org.stjs.javascript.typed.Uint8Array;
 
@@ -58,10 +59,10 @@ public abstract class MediaKeySession implements EventTarget {
      * MediaKeySession.generateRequest()
      * Returns a Promise after generating a media request based on initialization data.
      *
-     * @param webm
-     * @param KEY
+     * @param initDataType
+     * @param initData
      */
-    public native Promise generateRequest(String webm, ArrayBufferView KEY);
+    public native Promise generateRequest(String initDataType, ArrayBuffer initData);
 
     /**
      * MediaKeySession.load()
@@ -81,5 +82,5 @@ public abstract class MediaKeySession implements EventTarget {
      *
      * @param license
      */
-    public native Promise update(Uint8Array license);
+    public native Promise update(ArrayBuffer license);
 }

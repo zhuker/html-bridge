@@ -1,13 +1,18 @@
 package org.stjs.javascript.eme;
 
+import org.stjs.javascript.dom.DOMEvent;
 import org.stjs.javascript.typed.ArrayBuffer;
 import org.w3c.dom.events.Event;
 
-abstract class MediaKeyMessageEvent implements Event {
-    ArrayBuffer message = null;
+public abstract class MediaKeyMessageEvent implements Event {
+    /**
+     * The message from the CDM.
+     */
+    public ArrayBuffer message;
 
     /**
-     * May be one of license-request, license-renewal, license-renewal, or individualization-request.
+     * The type of the message.
+     * May be one of MediaKeyMessageType
      */
-    String messageType;
+    public String messageType;
 }
