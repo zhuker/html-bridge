@@ -65,8 +65,8 @@ abstract public class Media extends Element {
 	public native void pause  ();
 	
 	/**
-     * HTMLMediaElement.setMediaKeys()
-     * Returns Promise. Sets the MediaKeys keys to use when decrypting media during playback.
+     * Sets the MediaKeys keys to use when decrypting media during playback.
+     * Returns Promise.
      */
-    public native Promise setMediaKeys(MediaKeys mediaKeys);
+    public native Promise<Void> setMediaKeys(MediaKeys mediaKeys);
 }
