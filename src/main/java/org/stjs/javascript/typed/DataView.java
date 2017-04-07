@@ -134,6 +134,8 @@ public class DataView implements ArrayBufferView {
      */
     public native void setUint16(int byteOffset, int value);
 
+    public native void setUint16(int byteOffset, int value, boolean littleEndian);
+
     /**
      * Stores a signed 32-bit integer (long) value at the specified byte offset
      * from the start of the view.
