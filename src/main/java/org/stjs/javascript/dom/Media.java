@@ -4,6 +4,7 @@ import org.stjs.javascript.Promise;
 import org.stjs.javascript.annotation.SyntheticType;
 import org.stjs.javascript.dom.media.TimeRanges;
 import org.stjs.javascript.eme.MediaKeys;
+import org.stjs.javascript.eme.WebKitMediaKeys;
 
 /**
  * common parent class for audio and video
@@ -54,6 +55,7 @@ abstract public class Media extends Element {
 	public Boolean preservesPitch;
 	public Boolean mozPreservesPitch;
     public MediaKeys mediaKeys;
+    public WebKitMediaKeys webkitKeys;
 
 	// addTextTrack()
 	public native String canPlayType  (String type);
@@ -69,4 +71,6 @@ abstract public class Media extends Element {
      * Returns Promise.
      */
     public native Promise<Void> setMediaKeys(MediaKeys mediaKeys);
+
+    public native WebKitMediaKeys webkitSetMediaKeys(WebKitMediaKeys mediaKeys);
 }
