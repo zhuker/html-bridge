@@ -1,8 +1,9 @@
 package org.stjs.javascript.builtin;
 
+import org.stjs.javascript.annotation.STJSBridge;
 import org.stjs.javascript.functions.Callback1;
 import org.stjs.javascript.functions.Callback2;
-
+@STJSBridge
 public class Map<K, V> {
     /**
      * The Map object is a simple key/value map. Any value (both objects and

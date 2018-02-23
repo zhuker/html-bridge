@@ -1,5 +1,6 @@
 package org.stjs.javascript.builtin;
 
+import org.stjs.javascript.annotation.STJSBridge;
 import org.stjs.javascript.functions.Callback1;
 
 /**
@@ -8,6 +9,7 @@ import org.stjs.javascript.functions.Callback1;
  * of a set in insertion order. A value in the Set may only occur once; it is
  * unique in the Set's collection.
  */
+@STJSBridge
 public class Set<P2> {
     /** Returns the number of values in the Set object. */
     public int size;
