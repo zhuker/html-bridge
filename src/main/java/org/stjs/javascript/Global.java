@@ -49,7 +49,8 @@ public class Global extends JSGlobal {
 	public native static void clearTimeout(TimeoutHandler handler);
 
 	public native static void clearInterval(TimeoutHandler handler);
-
+	
+	public native static Promise<Response> fetch(Request input);
 	/**
 	 * Deprecated, use encodeURI() or encodeURIComponent() instead.
 	 */
