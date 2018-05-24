@@ -9,4 +9,8 @@ public class Request {
 	public Request(String input) {
 		
 	}
+	@Native
+	public Request(String input, Object init) {
+		
+	}
 }
