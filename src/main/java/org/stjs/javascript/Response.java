@@ -9,4 +9,8 @@ public class Response {
 	public Promise<Object> json(){
 		return null;
 	}
+	@Native
+	public Promise<Object> text(){
+		return null;
+	}
 }
