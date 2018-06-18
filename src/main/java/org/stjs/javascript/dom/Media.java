@@ -62,7 +62,7 @@ abstract public class Media extends Element {
 
 	public native void load  ();
 
-	public native void play  ();
+	public native Promise<Void> play();
 
 	public native void pause  ();
 	
