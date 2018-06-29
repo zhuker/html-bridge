@@ -4,7 +4,7 @@ import org.stjs.javascript.Array;
 import org.stjs.javascript.builtin.Iterator;
 import org.stjs.javascript.functions.Callback1;
 
-abstract class MediaKeyStatusMap {
+public abstract class MediaKeyStatusMap {
     /**
      * MediaKeyStatusMap.size Read only
      * Returns the number of key/value pars in the status map.
