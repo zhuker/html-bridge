@@ -46,7 +46,7 @@ public abstract class MediaKeyStatusMap {
      * MediaKeyStatusMap.values() Read only
      * Returns a new Iterator object containing values for each element in the status map, in insertion order.
      */
-    public native Iterator<Array> values();
+    public native Iterator<String> values();
 
     /**
      * MediaKeyStatusMap.[@@iterator]() Read only
