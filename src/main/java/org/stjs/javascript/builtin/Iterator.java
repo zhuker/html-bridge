@@ -7,7 +7,7 @@ public class Iterator<T> {
     public native IteratorResult<T> next();
 
     @STJSBridge
-    private static class IteratorResult<T> {
+    public static class IteratorResult<T> {
         public boolean done;
         public T value;
     }
