@@ -16,7 +16,7 @@ public abstract class MediaKeySession implements EventTarget {
      * This promise can only be fulfilled and is never rejected.
      * Closing a session means that licenses and keys associated with it are no longer valid for decrypting media data.
      */
-    public Promise closed;
+    public Promise<Void> closed;
 
     /**
      * MediaKeySession.expiration Read only
@@ -53,7 +53,7 @@ public abstract class MediaKeySession implements EventTarget {
      * MediaKeySession.close()
      * Returns a Promise after notifying the current media session is no longer needed and that the CDM should release any resources associated with this object and close it.
      */
-    public native Promise close();
+    public native Promise<Void> close();
 
     /**
      * MediaKeySession.generateRequest()
@@ -62,19 +62,19 @@ public abstract class MediaKeySession implements EventTarget {
      * @param initDataType
      * @param initData
      */
-    public native Promise generateRequest(String initDataType, ArrayBuffer initData);
+    public native Promise<Void> generateRequest(String initDataType, ArrayBuffer initData);
 
     /**
      * MediaKeySession.load()
      * Returns a Promise that resolves to a boolean value after loading data for a specified session object.
      */
-    public native Promise load();
+    public native Promise<Boolean> load();
 
     /**
      * MediaKeySession.remove()
      * Returns a Promise after removing any session data associated with the current object.
      */
-    public native Promise remove();
+    public native Promise<Void> remove();
 
     /**
      * MediaKeySession.update()
@@ -82,5 +82,5 @@ public abstract class MediaKeySession implements EventTarget {
      *
      * @param license
      */
-    public native Promise update(ArrayBuffer license);
+    public native Promise<Void> update(ArrayBuffer license);
 }
